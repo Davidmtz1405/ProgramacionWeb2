@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1>Calculadora de Índice de Masa Corporal (IMC)</h1>
+    <form id="imcForm" onsubmit="calcularIMC(); return false;">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" step="0.1" required>
+
+        <label for="estatura">Estatura (m):</label>
+        <input type="number" id="estatura" step="0.01" required>
+
+        <button type="submit">Calcular IMC</button>
+    </form>
+
+    <script>
+        function calcularIMC() {
+            const nombre = document.getElementById('nombre').value;
+            const edad = document.getElementById('edad').value;
+            const peso = parseFloat(document.getElementById('peso').value);
+            const estatura = parseFloat(document.getElementById('estatura').value);
+
+            if (isNaN(peso) || isNaN(estatura)) {
+                console.log("Por favor, introduce valores válidos para peso y estatura.");
+                return;
+            }
+
+            const imc = peso / (estatura * estatura);
+            console.log('Nombre: ${nombre})');
+            console.log('Edad: "${edad})');
+            console.log('Peso: ${peso} kg)');
+            console.log('Estatura: ${estatura} m)');
+            console.log('Tu Índice de Masa Corporal (IMC) es: ${imc.toFixed(2)}');
+        }
+    </script>
+</body>
+</html>
