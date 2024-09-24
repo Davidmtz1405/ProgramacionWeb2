@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de X y Tablas de Multiplicar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de X y Tablas de Multiplicar</h1>
+
+        <!-- Sección para generar 'X' conforme a la cantidad -->
+        <section>
+            <h2>Generar X</h2>
+            <label for="numero">Cantidad de X:</label>
+            <input type="number" id="numero" min="1" placeholder="Introduce un número">
+            <button onclick="generar()">Generar</button>
+            <pre id="resultado"></pre>
+        </section>
+
+        <!-- Sección para generar un cuadrado de 'X' -->
+        <section>
+            <h2>Generar Cuadrado de X (4x4)</h2>
+            <button onclick="generarCuadrado()">Generar Cuadrado</button>
+            <pre id="cuadradoResultado"></pre>
+        </section>
+
+        <!-- Sección para generar las tablas de multiplicar -->
+        <section>
+            <h2>Generar Tablas de Multiplicar</h2>
+            <button onclick="generarTablas()">Generar Tablas</button>
+            <pre id="tablasResultado"></pre>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
