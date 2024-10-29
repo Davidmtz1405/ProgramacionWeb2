@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    
+    <div class="calculadora" >
+        <input class="calcscreen" type="text" id="pantalla" disabled>
+        <br>
+        <input class="calcbutton" type="button" value="1" onclick="agregarPantalla('1')">
+        <input class="calcbutton" type="button" value="2" onclick="agregarPantalla('2')">
+        <input class="calcbutton" type="button" value="3" onclick="agregarPantalla('3')">
+        <input class="calcbutton" type="button" value="+" onclick="agregarPantalla('+')">
+        <br>
+        <input class="calcbutton" type="button" value="4" onclick="agregarPantalla('4')">
+        <input class="calcbutton" type="button" value="5" onclick="agregarPantalla('5')">
+        <input class="calcbutton" type="button" value="6" onclick="agregarPantalla('6')">
+        <input class="calcbutton" type="button" value="-" onclick="agregarPantalla('-')">
+        <br>
+        <input class="calcbutton" type="button" value="7" onclick="agregarPantalla('7')">
+        <input class="calcbutton" type="button" value="8" onclick="agregarPantalla('8')">
+        <input class="calcbutton" type="button" value="9" onclick="agregarPantalla('9')">
+        <input class="calcbutton" type="button" value="*" onclick="agregarPantalla('*')">
+        <br>
+        <input class="calcbutton" type="button" value="C" onclick="limparPantalla()">
+        <input class="calcbutton" type="button" value="0" onclick="agregarPantalla('0')">
+        <input class="calcbutton" type="button" value="=" onclick="calcular()">
+        <input class="calcbutton" type="button" value="/" onclick="agregarPantalla('/')">
+
+    </div>
+
+    <a href="/Tarea07"><button>Inicio</button></a>
+    
+</body>
+<script src="/app.js"></script>
+</html>
