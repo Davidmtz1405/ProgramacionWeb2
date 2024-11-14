@@ -89,7 +89,7 @@ app.post('/add', (req, res) => {
 
 //Editar Usuarios
 
-app.get('/edit/:id', (req, res) => {
+app.get('/editar/:id', (req, res) => {
 
     const {id} = req.params;
     const query = 'select * from users where id = ?';
@@ -100,12 +100,12 @@ app.get('/edit/:id', (req, res) => {
             res.send("Error en la BD")
         } else{
 
-            res.render('edit', {users:results[0]});
+            res.render('editar', {users:results[0]});
         }
     });
 });
 
-app.post('/edit/:id', (req, res) => {
+app.post('/editar/:id', (req, res) => {
     const { id } = req.params;
     const { name, email } = req.body;
     const query = 'update users set name = ?, email = ? WHERE id = ?';

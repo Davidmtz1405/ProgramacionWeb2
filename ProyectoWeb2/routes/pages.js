@@ -2,13 +2,13 @@ const express = require("express");
 const path = require("path");
 const router = express.Router();
 
-router.get('/edit', (req, res) =>{
-    res.render(path.join(__dirname,'../views','/edit.ejs'))
+router.get('/editar', (req, res) =>{
+    res.render(path.join(__dirname,'../views','/editar.ejs'))
 });
 
 
-router.get('/agregar', (req, res) =>{
-    res.render(path.join(__dirname,'../views','/agregar.ejs'))
+router.get('/registrar', (req, res) =>{
+    res.render(path.join(__dirname,'../views','/registrar.ejs'))
 });
 
 router.get('/estilos', (req, res) =>{
