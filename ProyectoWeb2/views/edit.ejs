@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/estilos">
-  <title>Proyecto Final</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos">
+    <title>Editar Usuario</title>
 </head>
 <body>
-  <h1>Editar Usuarios</h1>
-  <form action="/edit/<%= users.id%>" method="post">
-    <label for="name">Nombre:</label>
-    <input type="text"  required name="name" id="name" value="<%= users.name%>">
-    <label for="email">Correo: </label>
-    <input type="email" id="email" name="email" required value="<%= users.email%>" >
-    <button type="submit">Actualizar</button>
- </form>
+    <div class="container">
+        <h1 class="main-title">Editar Usuario</h1>
+        
+        <form action="/edit/<%= users.id %>" method="POST" class="form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" value="<%= users.name %>" required class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= users.email %>" required class="form-control">
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="actualizar">Actualizar</button>
+                <a href="/" class="cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

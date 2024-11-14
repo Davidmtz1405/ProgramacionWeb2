@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/estilos">
-    <title>Proyecto Final</title>
+    <title>Proyecto Final - Listado de Usuarios</title>
 </head>
 <body>
-    
-    <h1>Listar usuarios</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Acciones</th>
-        </tr>
-        <!-- JS -->
-         <% users.forEach(user =>{  %>
-        <tr>
-            <td><%=user.id %></td>
-            <td><%=user.name %></td>
-            <td><%=user.email %></td>
-            <td>
-                <a href="/edit/<%= user.id %>">Editar</a>|
-                <a href="/delete/<%= user.id %>">Eliminar</a>
-            </td>
-        </tr>
-        <% }); %>
-    </table>
-    <a href="/agregar">Agregar Usuario</a>
+    <div class="container">
+        <h1 class="main-title">Listado de Usuarios</h1>
+        
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user =>{  %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td>
+                        <a href="/edit/<%= user.id %>" class="edit-link">Editar</a> |
+                        <a href="/delete/<%= user.id %>" class="delete-link">Eliminar</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        
+        <div class="actions">
+            <a href="/agregar" class="add-user">Agregar Usuario</a>
+        </div>
+    </div>
 </body>
 </html>
