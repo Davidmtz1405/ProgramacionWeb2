@@ -7,8 +7,8 @@ router.get('/edit', (req, res) =>{
 });
 
 
-router.get('/registrar', (req, res) =>{
-    res.render(path.join(__dirname,'../views','/registrar.ejs'))
+router.get('/agregar', (req, res) =>{
+    res.render(path.join(__dirname,'../views','/agregar.ejs'))
 });
 
 router.get('/estilos', (req, res) =>{
