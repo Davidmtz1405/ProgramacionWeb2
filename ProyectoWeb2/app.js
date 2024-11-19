@@ -54,7 +54,7 @@ app.listen(port,()=>{
     console.log(`El server esta en escucha desde http://localhost:${port}`);
 });
 
-//Mostrar lista de usuarios
+// lista de usuarios
 
 app.get('/', (req, res) => {
     //Consulta a la base de datos
@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
     //Trabajar con la conexion
     db.query(query, (err, results) => {
         if(err){
-            //Mensaje de Error para el usuario
+            //Mensaje de Error
             console.error(`Error al recupear los datos. Codigo de error: ${err}`)
             res.send('Error al recuperar los datos');
         } else{
@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
     });
 });
 
-// Agregar Usuario
+// Agregar
 
 app.post('/add', (req, res) => {
 
@@ -87,7 +87,7 @@ app.post('/add', (req, res) => {
     });
 });
 
-//Editar Usuarios
+//Editar
 
 app.get('/editar/:id', (req, res) => {
 
@@ -121,7 +121,7 @@ app.post('/editar/:id', (req, res) => {
     });
 });
 
-//Eliminar Usuario
+//Eliminar
 
 app.get('/delete/:id', (req, res) => {
 
