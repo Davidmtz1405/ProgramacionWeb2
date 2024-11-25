@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false})); /* analizar los datos del cue
 app.set('view engine', 'ejs'); // Es un motor de plantillas //Permite generar cambios en HTML de manera dinámica
 
 
-/* -- Crear Base de datos y Perfil de SQL --
+/* --Base de datos y Perfil de SQL --
 create database if not exists node_crud;
 use node_crud;
 create table if not exists users(
